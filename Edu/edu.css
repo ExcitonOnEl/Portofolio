@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.herobg {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* navbar start*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+}
+
+nav a img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ol li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    text-size: 14px;
+}
+
+.nav-links ol li::after {
+    content: ' ';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ol li:hover:after {
+    width: 100%;
+}
+
+/* navbar end */
+
+/* Text Box Start */
+.text-box {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 55px;
+}
+
+.text-box p {
+    font-size: 14px;
+    margin: 10px 0 40px;
+    color: #fff;
+}
+
+.hero-btn {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid;
+    padding: 12px 34px;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 0.5s;
+}
+
+/* Text Box End*/
+
+.bi-x,
+.bi-justify {
+    display: none;
+}
+
+span {
+    font-weight: 700;
+    color: #f44336;
+}
+
+/* Media <700 px Start */
+@media(max-width:700px) {
+    .text-box h1 {
+        font-size: 35px;
+    }
+
+    .nav-links ol li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: #f44336;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        height: 100vh;
+        width: 30vh;
+        z-index: 2;
+        transition: 0.75s;
+    }
+
+    nav .bi {
+        display: block;
+        color: #fff;
+        margin: 5px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links ol {
+        padding: 20px;
+    }
+
+    .hero-btn {
+        padding: 12px;
+    }
+
+}
+
+/* Media <800 px End */
+/* Hero End */
+
+/* Our Course Start */
+.course {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.course h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.course p {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* Course row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.course-col {
+    flex-basis: 32%;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    margin-bottom: 5%;
+}
+
+.course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Our Course End */
+
+/* Campus Start */
+.campus {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.campus-col {
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background-color: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+    font-weight: 500;
+    width: 100%;
+    font-size: 26px;
+    color: #fff;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    opacity: 1;
+    bottom: 49%;
+}
+
+/* Campus End */
+
+/* Facilities Start*/
+.facilities {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    width: 90%;
+    margin-bottom: 10%;
+    text-align: left;
+}
+
+.facilities-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Facilities End */
+
+/* Testimonial Start */
+.testimoni {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.user-col {
+    flex-basis: 42%;
+    margin-bottom: 10%;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff3f3;
+    display: flex;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.user-col p {
+    font-size: 12px;
+    padding: 0;
+}
+
+.user-col h4 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.user-col .bi {
+    color: #f44336;
+}
+
+/* Testimonial End */
+
+/* cta Start */
+.cta {
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(eduford_img/banner2.jpg);
+    margin: 100px auto;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    border-radius: 10px;
+}
+
+.cta H1 {
+    color: #fff;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+/* cta End */
+
+/* Footer Start */
+.footer {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.icon {
+    padding: 5px 20px;
+    cursor: pointer;
+    color: #15236e;
+}
+
+.bi-heart-fill {
+    color: red;
+}
+
+.footer span {
+    color: brown;
+}
+
+/* Footer End */
